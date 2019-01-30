@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles/mystyle.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="container white">
+      <h2 class="center">To-Do App</h2>
+     <div class="container">
+      <form  action="/index" method="POST">
+        <div class="row white">
+          <div class="col s12 container input-field">
+            <input type="text" name="item" id="item" required autocomplete="off">
+            <label for="item">Enter Your Task</label>
+          </div>
+          <div class="col s12 l4">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+      </form>
+     </div>
+      <ul class="collection with-header">
+       <li class="collection-header"><h4>Tasks</h4></li>
+       <%for(var i=0;i<todo.length;i++) {%>
+       <li class="collection-header flow-text sel"><%= todo[i].item%></li>
+       <%}%>
+     </ul>
+    </div>
+  </body>
+  <script src="/scripts/myscript.js"></script>
+</html>

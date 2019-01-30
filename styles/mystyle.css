@@ -1,0 +1,10 @@
+.sel:hover
+{
+  text-decoration: line-through;
+  cursor: pointer;
+}
+body
+{
+  background-image: url(../public/wallpaper.png);
+  background-size: cover; 
+}
